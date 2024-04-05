@@ -21,7 +21,6 @@ import java.util.ArrayList;
 // <rnk>45</rnk>
 //end
 public class SAXPar {
-    private static ArrayList<String> tags = new ArrayList<String>();
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
@@ -30,7 +29,9 @@ public class SAXPar {
 
     }
     public static class Handler extends DefaultHandler {
-        private int count = 10;
+        private static ArrayList<String> tags = new ArrayList<String>();
+
+        private int count = 1000;
         private boolean inRow = false;
         private String currentElement;
         private String brth_yr, gndr, ethcty, nm, cnt, rnk;
