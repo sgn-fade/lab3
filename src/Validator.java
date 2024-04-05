@@ -1,10 +1,15 @@
+import org.xml.sax.ErrorHandler;
 import org.xml.sax.SAXException;
 import org.xml.sax.SAXParseException;
 import org.xml.sax.helpers.DefaultHandler;
 
+import javax.xml.XMLConstants;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
+import javax.xml.transform.Source;
+import javax.xml.transform.stream.StreamSource;
+import javax.xml.validation.Schema;
+import javax.xml.validation.SchemaFactory;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -12,18 +17,19 @@ import java.io.InputStream;
 
 public class Validator {
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
-        SAXParserFactory factory = SAXParserFactory.newInstance();
-        factory.setValidating(true);
-
+        String lang = XMLConstants.W3C_XML_SCHEMA_NS_URI;
+        SchemaFactory factory = SchemaFactory.newInstance(lang);
+        Schema schema = null;
         try {
-            SAXParser parser = factory.newSAXParser();
-            DefaultHandler handler = new SAXErrorCheckhandler();
-            InputStream xmlStream = new FileInputStream("src/Popular_Baby_Names_NY.xml");
-            parser.parse(xmlStream, handler);
-        } catch (ParserConfigurationException | SAXException | IOException e) {
-            throw new RuntimeException(e);
-        }finally {
-            System.out.println("No Error");
+            schema = factory.newSchema(new File("src/Popular_Baby_Names_NY.xsd"));
+            javax.xml.validation.Validator validator = schema.newValidator();
+            ErrorHandler handler = new SAXErrorCheckhandler();
+            validator.setErrorHandler(handler);
+            Source source = new StreamSource("src/Popular_Baby_Names_NY.xml");
+            validator.validate(source);
+            System.out.println("File valid");
+        } catch (SAXException e) {
+            System.out.println("File error");
         }
     }
 
