@@ -34,7 +34,7 @@ public class BabiesList extends ArrayList<Baby>{
         babies.sort(new Comparator<Baby>() {
             @Override
             public int compare(Baby baby1, Baby baby2) {
-                return baby1.getCount().compareTo(baby2.getCount());
+                return Integer.parseInt(baby2.getCount()) - (Integer.parseInt(baby1.getCount()));
             }
         });
         while (babies.size() > 5) {
