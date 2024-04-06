@@ -4,13 +4,16 @@ import java.util.ArrayList;
 import java.util.Comparator;
 
 public class BabiesList extends ArrayList<Baby>{
-    private String ethnicity;
+    private final String ethnicity;
     private final ArrayList<Baby> babies = new ArrayList<>();
 
     public BabiesList(String ethnicity) {
         this.ethnicity = ethnicity;
     }
 
+    public String getEthnicity() {
+        return ethnicity;
+    }
     @Override
     public boolean isEmpty() {
         return babies.isEmpty();
@@ -23,7 +26,20 @@ public class BabiesList extends ArrayList<Baby>{
 
     @Override
     public boolean add(Baby baby) {
-        return babies.add(baby);
+        babies.add(baby);
+        sortList();
+        return true;
+    }
+    public void sortList() {
+        babies.sort(new Comparator<Baby>() {
+            @Override
+            public int compare(Baby baby1, Baby baby2) {
+                return baby1.getCount().compareTo(baby2.getCount());
+            }
+        });
+        while (babies.size() > 5) {
+            babies.remove(babies.size() - 1);
+        }
     }
 
     @Override
@@ -31,13 +47,14 @@ public class BabiesList extends ArrayList<Baby>{
         babies.clear();
     }
 
-    @Override
-    public void sort(Comparator<? super Baby> c) {
-        babies.sort(c);
-    }
 
     @Override
     public String toString() {
-        return babies.toString();
+        StringBuilder sb = new StringBuilder();
+
+        for(Baby baby : babies){
+            sb.append(baby);
+        }
+        return sb.toString();
     }
 }

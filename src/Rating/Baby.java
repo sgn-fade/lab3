@@ -2,13 +2,13 @@ package Rating;
 
 public class Baby {
     private String name;
-    private int birthDate;
+    private String birthDate;
     private String gender;
     private String ethnicity;
-    private int count;
-    private int rnk;
+    private String count;
+    private String rnk;
 
-    public Baby(String name, int birthDate, String gender, String ethnicity, int count, int rnk) {
+    public Baby(String name, String birthDate, String gender, String ethnicity, String count, String rnk) {
         this.name = name;
         this.birthDate = birthDate;
         this.gender = gender;
@@ -19,7 +19,7 @@ public class Baby {
 
     @Override
     public String toString() {
-        return "Baby{" +
+        return "\nBaby{" +
                 "name='" + name + '\'' +
                 ", birthDate=" + birthDate +
                 ", gender='" + gender + '\'' +
@@ -37,11 +37,11 @@ public class Baby {
         this.name = name;
     }
 
-    public int getBirthDate() {
+    public String getBirthDate() {
         return birthDate;
     }
 
-    public void setBirthDate(int birthDate) {
+    public void setBirthDate(String birthDate) {
         this.birthDate = birthDate;
     }
 
@@ -61,19 +61,19 @@ public class Baby {
         this.ethnicity = ethnicity;
     }
 
-    public int getCount() {
+    public String getCount() {
         return count;
     }
 
-    public void setCount(int count) {
+    public void setCount(String count) {
         this.count = count;
     }
 
-    public int getRnk() {
+    public String getRnk() {
         return rnk;
     }
 
-    public void setRnk(int rnk) {
+    public void setRnk(String rnk) {
         this.rnk = rnk;
     }
 }
