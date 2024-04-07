@@ -56,7 +56,7 @@ public abstract class  DomPars {
             System.out.println("Ethocity: ");
             NamedNodeMap attrs = lstName.item(i).getAttributes();
 
-            System.out.println("\t" + attrs.item(i).getNodeName() + ": " + attrs.item(i).getNodeValue().trim());
+            System.out.println("\t" + attrs.item(0).getNodeName() + ": " + attrs.item(0).getNodeValue().trim());
             int babiesNum = lstName.item(i).getChildNodes().getLength();
             NodeList babies = lstName.item(i).getChildNodes();
 
