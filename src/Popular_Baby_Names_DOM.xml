@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="Windows-1251" standalone="no"?>
+<list>
+    <ethocity_group ethocity_name="HISPANIC">
+        <baby birthday="2011" count="426" gender="MALE" name="JAYDEN" rank="1"/>
+        <baby birthday="2011" count="426" gender="MALE" name="JAYDEN" rank="1"/>
+        <baby birthday="2011" count="426" gender="MALE" name="JAYDEN" rank="1"/>
+        <baby birthday="2011" count="426" gender="MALE" name="JAYDEN" rank="1"/>
+        <baby birthday="2019" count="423" gender="MALE" name="Liam" rank="1"/>
+    </ethocity_group>
+    <ethocity_group ethocity_name="WHITE NON HISPANIC">
+        <baby birthday="2013" count="304" gender="MALE" name="David" rank="1"/>
+        <baby birthday="2013" count="304" gender="MALE" name="David" rank="1"/>
+        <baby birthday="2013" count="304" gender="MALE" name="David" rank="1"/>
+        <baby birthday="2013" count="304" gender="MALE" name="David" rank="1"/>
+        <baby birthday="2013" count="304" gender="MALE" name="David" rank="1"/>
+    </ethocity_group>
+    <ethocity_group ethocity_name="ASIAN AND PACIFIC ISLANDER">
+        <baby birthday="2013" count="220" gender="MALE" name="Jayden" rank="1"/>
+        <baby birthday="2013" count="220" gender="MALE" name="Jayden" rank="1"/>
+        <baby birthday="2013" count="220" gender="MALE" name="Jayden" rank="1"/>
+        <baby birthday="2013" count="220" gender="MALE" name="Jayden" rank="1"/>
+        <baby birthday="2016" count="193" gender="MALE" name="Ethan" rank="1"/>
+    </ethocity_group>
+    <ethocity_group ethocity_name="BLACK NON HISPANIC">
+        <baby birthday="2011" count="184" gender="MALE" name="JAYDEN" rank="1"/>
+        <baby birthday="2011" count="184" gender="MALE" name="JAYDEN" rank="1"/>
+        <baby birthday="2011" count="184" gender="MALE" name="JAYDEN" rank="1"/>
+        <baby birthday="2011" count="184" gender="MALE" name="JAYDEN" rank="1"/>
+        <baby birthday="2011" count="184" gender="MALE" name="JAYDEN" rank="1"/>
+    </ethocity_group>
+    <ethocity_group ethocity_name="ASIAN AND PACI">
+        <baby birthday="2012" count="197" gender="MALE" name="RYAN" rank="1"/>
+        <baby birthday="2012" count="197" gender="MALE" name="RYAN" rank="1"/>
+        <baby birthday="2012" count="197" gender="MALE" name="RYAN" rank="1"/>
+        <baby birthday="2012" count="197" gender="MALE" name="RYAN" rank="1"/>
+        <baby birthday="2012" count="197" gender="MALE" name="RYAN" rank="1"/>
+    </ethocity_group>
+    <ethocity_group ethocity_name="BLACK NON HISP">
+        <baby birthday="2012" count="171" gender="MALE" name="JAYDEN" rank="1"/>
+        <baby birthday="2012" count="171" gender="MALE" name="JAYDEN" rank="1"/>
+        <baby birthday="2012" count="171" gender="MALE" name="JAYDEN" rank="1"/>
+        <baby birthday="2012" count="171" gender="MALE" name="JAYDEN" rank="1"/>
+        <baby birthday="2012" count="159" gender="FEMALE" name="MADISON" rank="1"/>
+    </ethocity_group>
+    <ethocity_group ethocity_name="WHITE NON HISP">
+        <baby birthday="2012" count="300" gender="MALE" name="JOSEPH" rank="1"/>
+        <baby birthday="2012" count="300" gender="MALE" name="JOSEPH" rank="1"/>
+        <baby birthday="2012" count="300" gender="MALE" name="JOSEPH" rank="1"/>
+        <baby birthday="2012" count="300" gender="MALE" name="JOSEPH" rank="1"/>
+        <baby birthday="2012" count="300" gender="MALE" name="JOSEPH" rank="1"/>
+    </ethocity_group>
+</list>

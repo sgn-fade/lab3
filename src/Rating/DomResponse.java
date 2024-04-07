@@ -42,11 +42,18 @@ public class DomResponse {
     public String getRank(int pos) {
         return document.getDocumentElement().getElementsByTagName("rnk").item(pos).getTextContent().trim();
     }
+    public void addRootElement(String name){
+        Element root = document.createElement(name);
+        document.appendChild(root);
+    }
     public void addElement(BabiesList babies){
-        Element EthnocityGroup = document.createElement("ethocity group");
+        Element EthnocityGroup = document.createElement("ethocity_group");
+        Attr attr = document.createAttribute("ethocity_name");
+        attr.setValue(babies.getEthnicity());
+        EthnocityGroup.setAttributeNode(attr);
         for(Baby baby : babies.getBabies()){
             Element babyEl = document.createElement("baby");
-            Attr attr = document.createAttribute("name");
+            attr = document.createAttribute("name");
             attr.setValue(baby.getName());
             babyEl.setAttributeNode(attr);
             attr = document.createAttribute("birthday");

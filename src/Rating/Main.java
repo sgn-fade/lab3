@@ -7,6 +7,7 @@ import org.xml.sax.helpers.DefaultHandler;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
+import javax.xml.transform.TransformerConfigurationException;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -25,12 +26,12 @@ public class Main {
     private static String currentElement;
     private static String brth_yr, gndr, ethcty, nm, cnt, rnk;
 
-    public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+    public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException, TransformerConfigurationException {
         SAXParserFactory factory = SAXParserFactory.newInstance();
         SAXParser parser = factory.newSAXParser();
         Handler handler = new Handler();
         parser.parse(new File("src/Popular_Baby_Names_NY.xml"), handler);
-
+        DomPars.WriteDocument("src/Popular_Baby_Names_DOM.xml", EthnicityBabyList);
     }
     public static class Handler extends DefaultHandler {
         @Override
