@@ -42,6 +42,10 @@ public class BabiesList extends ArrayList<Baby>{
         }
     }
 
+    public ArrayList<Baby> getBabies() {
+        return babies;
+    }
+
     @Override
     public void clear() {
         babies.clear();
